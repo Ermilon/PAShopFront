@@ -1,0 +1,11 @@
+<header>
+  <mat-toolbar class="menu">
+      <a class="menu-title" [routerLink]="['/']">PAShop</a>
+      <mat-form-field class="menu-title">
+          <input matInput type="text" placeholder="Clearable input" [(ngModel)]="value">  
+          <button mat-icon-button *ngIf="value" color="primary" (click)="value=''">
+            <mat-icon>favorite</mat-icon>
+          </button>
+      </mat-form-field>
+  </mat-toolbar>
+</header>
