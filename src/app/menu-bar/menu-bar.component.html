@@ -1,11 +1,15 @@
 <header>
-  <mat-toolbar class="menu">
-      <a class="menu-title" [routerLink]="['/']">PAShop</a>
-      <mat-form-field class="menu-title">
-          <input matInput type="text" placeholder="Clearable input" [(ngModel)]="value">  
-          <button mat-icon-button *ngIf="value" color="primary" (click)="value=''">
-            <mat-icon>favorite</mat-icon>
-          </button>
-      </mat-form-field>
+  <mat-toolbar class="menu-background">
+  <a class="menu-title" [routerLink]="['/']">PAShop</a>
+  <span class="menu-spacer"></span>
+  <mat-form-field class="menu-input">
+    <input matInput>
+  </mat-form-field>
+  <button class="menu-button" mat-icon-button><mat-icon class="menu-button-icon">search</mat-icon></button>
+  <span class="menu-spacer"></span>
+    <button class="menu-button" mat-icon-button><mat-icon class="menu-button-icon">account_circle</mat-icon></button>
+    <button class="menu-button" mat-icon-button><mat-icon class="menu-button-icon">shopping_cart</mat-icon></button>
   </mat-toolbar>
 </header>
+
+

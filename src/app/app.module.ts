@@ -9,7 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material';
+import { MatButtonModule, MatGridListModule, MatMenuModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,9 @@ import { MatButtonModule } from '@angular/material';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
