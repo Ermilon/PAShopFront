@@ -10,11 +10,25 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule, MatGridListModule, MatMenuModule } from '@angular/material';
+import { AuthenticationComponent } from './authentication/authentication.component';
+import { HomeComponent } from './home/home.component';
+import { FooterBarComponent } from './footer-bar/footer-bar.component';
+import { ProductComponent } from './product/product.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductHotComponent } from './product-hot/product-hot.component';
+import { ProductTableComponent } from './product-table/product-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuBarComponent
+    MenuBarComponent,
+    AuthenticationComponent,
+    HomeComponent,
+    FooterBarComponent,
+    ProductComponent,
+    ProductDetailsComponent,
+    ProductHotComponent,
+    ProductTableComponent
   ],
   imports: [
     BrowserModule,

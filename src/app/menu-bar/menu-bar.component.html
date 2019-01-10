@@ -7,7 +7,14 @@
   </mat-form-field>
   <button class="menu-button" mat-icon-button><mat-icon class="menu-button-icon">search</mat-icon></button>
   <span class="menu-spacer"></span>
-    <button class="menu-button" mat-icon-button><mat-icon class="menu-button-icon">account_circle</mat-icon></button>
+
+
+  <button class="menu-button" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon class="menu-button-icon">account_circle</mat-icon>
+    </button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [routerLink]="['authentication']">Se connecter</button>
+</mat-menu>
     <button class="menu-button" mat-icon-button><mat-icon class="menu-button-icon">shopping_cart</mat-icon></button>
   </mat-toolbar>
 </header>
