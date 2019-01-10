@@ -1,2 +1,7 @@
 <h2>Bienvenue sur la boutique PAShop!</h2>
 <h4>La boutique où vous trouverez votre bonheur</h4>
+
+<h3>Hot</h3>
+<app-product-hot></app-product-hot>
+<h3>Standard</h3>
+<app-product-overview *ngFor="let product of products" [product]="product"></app-product-overview>
