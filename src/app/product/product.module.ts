@@ -4,7 +4,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ProductHotComponent } from './product-hot/product-hot.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ProductOverviewComponent } from './product-overview/product-overview.component';
-import { MatCardModule, MatButtonModule } from '@angular/material';
+import { MatCardModule, MatButtonModule, MatGridListModule } from '@angular/material';
+import { UICarouselModule } from "ui-carousel";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { MatCardModule, MatButtonModule } from '@angular/material';
   imports: [
     CommonModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule,
+    UICarouselModule
   ],
   exports : [
     ProductDetailsComponent,

@@ -9,7 +9,7 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule, MatGridListModule, MatMenuModule } from '@angular/material';
+import { MatButtonModule, MatMenuModule } from '@angular/material';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { HomeComponent } from './home/home.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
@@ -35,7 +35,6 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     MatButtonModule,
     ProductModule,
-    MatGridListModule,
     MatMenuModule,
     MatCardModule
   ],

@@ -1,10 +1,10 @@
-<mat-card class="example-card" *ngIf="product">
+<mat-card class="example-card" *ngIf="product && type==1">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ product.name }}</mat-card-title>
       <mat-card-subtitle>{{ product.name }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src={{product.image}} alt="Photo of Toto">
+    <img mat-card-image src={{product.image}} alt="Photo of Toto" height="150px">
     <mat-card-content>
       <p>
        {{product.description}}
@@ -14,4 +14,11 @@
       <button mat-button>Details</button>
       <button mat-button>Add To Cart</button>
     </mat-card-actions>
-  </mat-card>
+</mat-card>
+
+<div *ngIf="product && type==2">
+  <h3 class="ImageCenter">{{product.name}}</h3>
+  <a>{{product.description}}</a>
+  <button mat-button>Details</button>
+  <button mat-button>Add To Cart</button>
+</div>
