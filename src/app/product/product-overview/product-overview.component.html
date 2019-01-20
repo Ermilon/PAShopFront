@@ -1,3 +1,4 @@
+<!-- Affichage des produits en mode liste de MAtCards pour le moment-->
 <mat-card class="example-card" *ngIf="product && type==1">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
@@ -16,9 +17,23 @@
     </mat-card-actions>
 </mat-card>
 
+<!--Si c'est contenu dans la HOT bar on l'affiche en mode image-->
 <div *ngIf="product && type==2">
-  <h3 class="ImageCenter">{{product.name}}</h3>
-  <a>{{product.description}}</a>
-  <button mat-button>Details</button>
-  <button mat-button>Add To Cart</button>
+  <h3 class="hotname">{{product.name}}</h3>
+  <div>
+      <img mat-card-image class="center" src={{product.image}} alt="Product Picture" height="400px">
+      <div class="hotPrice">{{product.price}}</div>
+  </div>
+  <div class="buttonsBottom">
+      <button mat-button class="hotButtons">Afficher les détails</button>
+      <button mat-button class="hotButtons">Ajouter au panier</button>
+  </div>
 </div>
+
+
+
+<!--
+<h3 class="ImageCenter">{{product.name}}</h3>
+  <a>{{product.description}}</a>
+  
+-->

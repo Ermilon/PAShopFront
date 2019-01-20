@@ -7,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   products= [
-    {name: 'Test', description: 'Description de Test', image:'https://www.pervers-narcissique.com/wp-content/uploads/2018/02/test.jpg'},
-    {name: 'Toto', description: 'Description de Toto', image:'http://www.toto99.com/news/images/TOTO.VIP.jpg'},
-    {name: 'Toto', description: 'Description de Toto', image:'http://www.toto99.com/news/images/TOTO.VIP.jpg'},
-    {name: 'Toto', description: 'Description de Toto', image:'http://www.toto99.com/news/images/TOTO.VIP.jpg'},
-    {name: 'Test', description: 'Description de Test', image:'https://www.pervers-narcissique.com/wp-content/uploads/2018/02/test.jpg'},
-    {name: 'Test', description: 'Description de Test', image:'https://www.pervers-narcissique.com/wp-content/uploads/2018/02/test.jpg'}
+    {name: 'Gérard Depardieu',    descriptionShort: 'Votre parfait compagnon de beuverie',                image:'assets/AngularStarsPictures/Depardieu.jpg',  price:'350€'},
+    {name: 'Liliane Bettencourt', descriptionShort: 'Gagne en 18 minutes ce que vous gagnez en une vie',  image:'assets/AngularStarsPictures/Liliane.jpg',    price:'15€'},
+    {name: 'Cyril Hanouna',       descriptionShort:'Ce bon vieu Baba saura vous faire rire',              image:'assets/AngularStarsPictures/Hanuna.jpeg',    price:'180€'},
   ]
   constructor() { }
 

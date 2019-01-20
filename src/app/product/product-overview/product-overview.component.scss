@@ -6,3 +6,46 @@
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width : 400px;
+    height: 400px;
+  }
+
+  .hotname {
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    color: rgb(241, 241, 241);
+    background-color: rgb(255, 58, 58);
+    text-decoration: none; 
+    font-weight: 900;
+  }
+
+  .buttonsBottom{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hotButtons {
+    color: rgb(241, 241, 241);
+    background-color: rgba(0, 0, 0, 0.300);
+    margin : 20px;
+    width : 150px;
+  }
+
+  .hotPrice {
+      position: absolute;
+      border-radius : 50%;
+      padding : 1%;
+      font-weight: 900;
+      top: 8%;
+      right: 30%;
+      background-color: rgb(255, 0, 0);
+      color : rgb(241, 241, 241)
+  }
