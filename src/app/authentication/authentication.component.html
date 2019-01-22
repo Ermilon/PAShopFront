@@ -1,3 +1,64 @@
-<p>
-  authentication works!
-</p>
+<div class="centered">
+<mat-grid-list cols="2" rowHeight="650px" gutterSize="1px">
+    <mat-grid-tile>
+      <h3 class="top">Déjà Utilisateur?</h3>
+      <div class="top2">
+          <form #connection="ngForm">
+              <a class="inputs">Connectez vous</a> <br/>
+              <mat-form-field class="inputs">
+                <input matInput type="email" name="Email" placeholder="Adresse mail" value="" required ngModel #Email="ngModel">
+                <mat-error *ngIf="connection.hasError('required')">Veuillez entrer une adresse mail</mat-error>
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="inputs">
+                <input matInput type="password" name="Password" placeholder="Mot de passe" value="" required ngModel #Password="ngModel">
+                <mat-error *ngIf="connection.hasError('required')">Veuillez entrer un mot de passe</mat-error>
+              </mat-form-field>
+                <br/>
+              <button style="left:60%" mat-raised-button [disabled]="connection.invalid" (click)="sendForm(connection.value)">Connexion</button>
+              <pre>{{connection.value | json }}</pre>
+            </form>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <h3 class="top">Nouvel Arrivant?</h3>
+      <div class="top2">
+          <form #register="ngForm">
+              <a class="inputs">Inscrivez vous</a> <br/>
+              <mat-form-field class="inputs">
+                  <input matInput type="email" name="mailRegister" placeholder="Adresse mail" value="" required ngModel #mailRegister="ngModel">
+                  <mat-error *ngIf="register.hasError('required')">Veuillez saisir une adresse mail</mat-error>
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="inputs">
+                  <input matInput type="password" name="passwordRegister" placeholder="Mot de passe" value="" required ngModel #passwordRegister="ngModel">
+                <mat-error *ngIf="register.hasError('required')">Veuillez saisir un mot de passe</mat-error>
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="inputs">
+                  <input matInput type="password" name="passwordConfirmRegister" placeholder="Confirmation du mot de passe" value="" required ngModel #passwordConfirmRegister="ngModel">
+                <mat-error *ngIf="register.hasError('required')">Veuillez confirmer votre mot de passe</mat-error>
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="inputs">
+                  <input matInput type="text" name="firstnameRegister" placeholder="Nom" value="" required ngModel #firstnameRegister="ngModel">
+                <mat-error *ngIf="register.hasError('required')">Veuillez indiquer votre nom</mat-error>
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="inputs">
+                  <input matInput type="text" name="lastnameRegister" placeholder="Prénom" value="" required ngModel #lastnameRegister="ngModel">
+                <mat-error *ngIf="register.hasError('required')">Veuillez indiquer votre prénom</mat-error>
+              </mat-form-field>
+              <br/>
+              <mat-form-field class="inputs">
+                  <textarea matInput typer="text" name="adressRegister" placeholder="Adresse" value="" required ngModel #adressRegister="ngModel"></textarea>
+                  <mat-error *ngIf="register.hasError('required')">Veuillez indiquer votre adresse</mat-error>
+                </mat-form-field>
+                <br/>
+                <button style="left:60%" mat-raised-button [disabled]="register.invalid">S'inscrire</button>
+                <pre>{{register.value | json }}</pre>
+            </form>
+      </div>
+    </mat-grid-tile>
+</mat-grid-list>
+</div>

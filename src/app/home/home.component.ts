@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
     {id: 4, name: 'Michèle Mathy',       descriptionShort: 'Vous sauve la vie en un claquement de doigts',       image:'assets/AngularStarsPictures/MimiMathy.jpg',  price:'1500€', hot:true},
     {id: 5, name: 'Jean-Pierre Coffe',   descriptionShort: 'La crème de la critique gastronomique Française',    image:'assets/AngularStarsPictures/Coffe.jpeg',      price:'480€',  hot:true}
   ]
+  
   constructor() { }
 
   ngOnInit() {

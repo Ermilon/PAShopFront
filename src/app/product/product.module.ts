@@ -6,6 +6,7 @@ import { ProductTableComponent } from './product-table/product-table.component';
 import { ProductOverviewComponent } from './product-overview/product-overview.component';
 import { MatCardModule, MatButtonModule, MatGridListModule } from '@angular/material';
 import { UICarouselModule } from "ui-carousel";
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,14 @@ import { UICarouselModule } from "ui-carousel";
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
-    UICarouselModule
+    UICarouselModule,
+    RouterModule,
   ],
   exports : [
     ProductDetailsComponent,
     ProductHotComponent,
     ProductTableComponent,
-    ProductOverviewComponent
+    ProductOverviewComponent,
   ]
 })
 export class ProductModule { }

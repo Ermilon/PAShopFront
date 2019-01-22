@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product-hot',
@@ -8,8 +9,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProductHotComponent implements OnInit {
   @Input() products;
   @Input() type;
-  constructor() { }
 
+  dataSource;  
+
+  //constructor(private productService: ProductService){
+   // this.productService.getHot().subscribe(data=>{
+   //   this.dataSource = data;
+   // })
+  //}
   ngOnInit() {
   }
 

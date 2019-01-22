@@ -9,12 +9,15 @@ import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule, MatMenuModule } from '@angular/material';
+import { MatButtonModule, MatMenuModule, MatGridListModule } from '@angular/material';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { HomeComponent } from './home/home.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { ProductModule } from './product/product.module';
 import { MatCardModule } from '@angular/material/card';
+import { BasketComponent } from './basket/basket.component';
+import { UserComponent } from './user/user.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,8 @@ import { MatCardModule } from '@angular/material/card';
     AuthenticationComponent,
     HomeComponent,
     FooterBarComponent,
+    BasketComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,11 +37,14 @@ import { MatCardModule } from '@angular/material/card';
     MatToolbarModule,
     MatInputModule,
     MatFormFieldModule,
+    HttpModule,
     FormsModule,
     MatButtonModule,
     ProductModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AuthenticationService } from './authentication.service'
 
 @Component({
   selector: 'app-authentication',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthenticationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private authenticationService: AuthenticationService) {
+  }
 
   ngOnInit() {
   }
 
+  sendForm(value: string){
+    this.route.params.subscribe(params => {
+      this.authenticationService.login(value).subscribe();
+    });
+  }
 }

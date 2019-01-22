@@ -3,12 +3,12 @@
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ product.name }}</mat-card-title>
-      <mat-card-subtitle>{{ product.name }}</mat-card-subtitle>
+      <mat-card-subtitle>{{product.descriptionShort}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src={{product.image}} alt="Photo of Toto" height="150px">
     <mat-card-content>
       <p>
-       {{product.description}}
+       {{product.descriptionShort}}
       </p>
     </mat-card-content>
     <mat-card-actions>
@@ -25,15 +25,7 @@
       <div class="hotPrice">{{product.price}}</div>
   </div>
   <div class="buttonsBottom">
-      <button mat-button class="hotButtons">Afficher les détails</button>
+      <button mat-button class="hotButtons" [routerLink]="['/products',product.id]">Afficher les détails</button>
       <button mat-button class="hotButtons">Ajouter au panier</button>
   </div>
 </div>
-
-
-
-<!--
-<h3 class="ImageCenter">{{product.name}}</h3>
-  <a>{{product.description}}</a>
-  
--->
