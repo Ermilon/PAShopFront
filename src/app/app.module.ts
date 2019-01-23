@@ -18,6 +18,7 @@ import { MatCardModule } from '@angular/material/card';
 import { BasketComponent } from './basket/basket.component';
 import { UserComponent } from './user/user.component';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HttpModule } from '@angular/http';
     MatMenuModule,
     MatCardModule,
     MatGridListModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

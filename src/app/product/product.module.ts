@@ -5,7 +5,7 @@ import { ProductHotComponent } from './product-hot/product-hot.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ProductOverviewComponent } from './product-overview/product-overview.component';
 import { MatCardModule, MatButtonModule, MatGridListModule } from '@angular/material';
-import { UICarouselModule } from "ui-carousel";
+import { UICarouselModule } from "ng-carousel-iuno";
 import { RouterModule } from '@angular/router';
 
 @NgModule({

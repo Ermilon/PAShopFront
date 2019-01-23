@@ -13,11 +13,27 @@ export class AuthenticationComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('AuthenticationComponent.ngOnInit')
   }
 
-  sendForm(value: string){
+  sendFormLogin(value: string){
     this.route.params.subscribe(params => {
-      this.authenticationService.login(value).subscribe();
+      this.authenticationService.login(value).subscribe(x =>{
+        console.log('User Logged');
+        this.getUserInfos();
+      });
     });
+  }
+
+  sendFormRegister(value: string){
+    this.route.params.subscribe(params => {
+      this.authenticationService.register(value).subscribe(x => console.log('User Registred',x));
+    });
+  }
+
+  getUserInfos(){
+    this.route.params.subscribe(params => {
+      this.authenticationService.getUserInfos().subscribe(x => console.log('User Infos',x));
+    })
   }
 }
