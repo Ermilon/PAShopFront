@@ -1,5 +1,6 @@
-<h3>Tous nos produits</h3>
-<a *ngIf="search != ''">Résultats de votre recherche pour : <strong>{{search}}</strong>.</a>
-<div *ngFor="let product of products">
-    <app-product-overview [product]="product" [type]="type"></app-product-overview>
-</div>
+<h2>Tous nos clones</h2>
+<div *ngIf='products'>
+    <ng-container  *ngFor="let product of products" >
+        <app-product-overview [product]='product' [type]="1"></app-product-overview>
+    </ng-container>
+</div>   

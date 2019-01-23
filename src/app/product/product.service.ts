@@ -1,17 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  //private baseUrl = 'http://localhost/';
+  baseUrl = "https://localhost:44336/api";
+  
+  constructor(private http: HttpClient) { }
 
-  //constructor(private http: Http) { }
-
-  //public getHot(): Observable<any> {
-  //  return this.http.get(`${this.baseUrl}/`)
-  //}
+  public getAllProducts(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/items`)
+    .pipe(map((data)=>{
+      return data;
+    }, (err) => {
+      console.log('An error occured', err);
+    }))
+  }
 }

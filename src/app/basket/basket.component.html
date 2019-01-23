@@ -1,3 +1,11 @@
-<p>
-  basket works!
-</p>
+<h2>Votre panier</h2>
+<div *ngIf='basket'>
+    <div *ngIf='!basket.basketItems'>
+        vide
+      </div>
+    <ng-container *ngFor="let product of basket.basketItems">
+        loul
+      </ng-container>
+</div>
+
+

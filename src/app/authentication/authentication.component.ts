@@ -13,15 +13,11 @@ export class AuthenticationComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('AuthenticationComponent.ngOnInit')
   }
 
   sendFormLogin(value: string){
     this.route.params.subscribe(params => {
-      this.authenticationService.login(value).subscribe(x =>{
-        console.log('User Logged');
-        this.getUserInfos();
-      });
+      this.authenticationService.login(value).subscribe(x => console.log('User Logged',x));
     });
   }
 
@@ -31,9 +27,4 @@ export class AuthenticationComponent implements OnInit {
     });
   }
 
-  getUserInfos(){
-    this.route.params.subscribe(params => {
-      this.authenticationService.getUserInfos().subscribe(x => console.log('User Infos',x));
-    })
-  }
 }

@@ -1,3 +1,7 @@
-<p>
-  user works!
-</p>
+<h2>Vos Infos</h2>
+<div *ngIf='user'>
+  <p>nom : {{user.name}}</p>
+  <p>prénom : {{user.lastName}}</p>
+  <p>mail : {{user.email}}</p>
+  <p>adresse : {{user.address}}</p>
+</div>
