@@ -17,7 +17,6 @@ export class BasketComponent implements OnInit {
   }
 
   getMyBasket(){
-    console.log('getMyBasket');
     this.route.params.subscribe(params => {
       this.userService.getUserBasket().subscribe(x => {
         this.basket = x;

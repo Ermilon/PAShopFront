@@ -4,7 +4,7 @@
         Vootre panier est actuellement vide
     </div>
     <ng-container *ngFor="let product of basket.basketItems">
-        <app-product-overview [product]="product.item" [type]="3"></app-product-overview>
+        <app-product-overview [product]="product.item" [type]="3" [quantity]="product.quantity"></app-product-overview>
     </ng-container>
 </div>
 

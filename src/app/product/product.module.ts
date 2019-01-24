@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductHotComponent } from './product-hot/product-hot.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ProductOverviewComponent } from './product-overview/product-overview.component';
@@ -14,7 +13,6 @@ import {MatSnackBarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
-    ProductDetailsComponent,
     ProductHotComponent,
     ProductTableComponent,
     ProductOverviewComponent,
@@ -34,7 +32,6 @@ import {MatSnackBarModule} from '@angular/material';
     MatSnackBarModule
   ],
   exports : [
-    ProductDetailsComponent,
     ProductHotComponent,
     ProductTableComponent,
     ProductOverviewComponent,

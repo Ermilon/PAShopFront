@@ -13,7 +13,6 @@ export class UserService {
   public getUserInfos(){
     let headers = new HttpHeaders();
     let authToken = localStorage.getItem('token');
-    console.log('le token',authToken);
     headers = headers.append('Content-Type', 'application/json');
     headers = headers.append('Authorization', `Bearer ${authToken}`);
     return this.http.get(`${this.baseUrl}/auth/me`, {headers:headers}) // le client http était l'ancien (angular/http) là le client http vient de (angular/common/http)
@@ -29,17 +28,14 @@ export class UserService {
   public getUserBasket(){
     let headers = new HttpHeaders();
     let authToken = localStorage.getItem('token');
-    console.log('getUserBasket');
     headers = headers.append('Content-Type', 'application/json');
     headers = headers.append('Authorization', `Bearer ${authToken}`);
 
     return this.http.get(`${this.baseUrl}/baskets/mine`, {headers:headers}) // le client http était l'ancien (angular/http) là le client http vient de (angular/common/http)
     .pipe(
       map((data) => {
-        console.log('Fils de pute');
         return data;
       }, (err) => {
-        console.log('Fils de chien');
         console.log('An error occured', err);
       })
     )
