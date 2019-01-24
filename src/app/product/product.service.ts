@@ -35,6 +35,17 @@ export class ProductService {
       })
     )}
 
+    public getTva(){
+      return this.http.get(`${this.baseUrl}/items/tva`)
+      .pipe(
+        map((data) => {
+          return data;
+        }, (err) => {
+          console.log('An error occured', err);
+        })
+      )
+    }
+
     public create(product : any){
       let headers = new HttpHeaders();
     let authToken = localStorage.getItem('token');

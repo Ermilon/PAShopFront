@@ -25,12 +25,19 @@
             <input matInput type="number" name="shippingPrice" placeholder="Prix expédition" value="" required ngModel #shippingPrice="ngModel">
           </mat-form-field>
         <br/>
-        <mat-form-field style="width: 300px">
-            <input matInput type="text" name="tva" placeholder="tva" value="" required ngModel #tva="ngModel">
+        <mat-form-field *ngIf='tvas' style="width: 300px">
+            <mat-select placeholder="tva" required ngModel #price_HT="ngModel" name="tva">
+              <mat-option *ngFor="let tva of tvas" [value]="tva.value">
+                {{tva.name}}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
+        <br/>
+        <mat-form-field style="width: 300px">
+          <input matInput type="text" name="imageUrl" placeholder="URL de l'image" value="" ngModel #imageUrl="ngModel">
+        </mat-form-field>
         <br/>
         <button mat-raised-button [disabled]="createClone.invalid" (click)="sendForm(createClone.value)">Connexion</button>
       </form>
-      <pre>{{createClone.value | json}}</pre>
   </div>
  

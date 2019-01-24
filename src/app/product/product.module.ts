@@ -4,12 +4,13 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ProductHotComponent } from './product-hot/product-hot.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ProductOverviewComponent } from './product-overview/product-overview.component';
-import { MatCardModule, MatButtonModule, MatGridListModule, MatInputModule } from '@angular/material';
+import { MatCardModule, MatButtonModule, MatGridListModule, MatInputModule, MatSelectModule } from '@angular/material';
 import { UICarouselModule } from "ng-carousel-iuno";
 import { RouterModule } from '@angular/router';
 import { ProductCreateComponent } from './product-create/product-create.component';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule} from '@angular/material/form-field';
+import {MatSnackBarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { MatFormFieldModule} from '@angular/material/form-field';
     ProductHotComponent,
     ProductTableComponent,
     ProductOverviewComponent,
-    ProductCreateComponent,
+    ProductCreateComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +29,9 @@ import { MatFormFieldModule} from '@angular/material/form-field';
     RouterModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatSnackBarModule
   ],
   exports : [
     ProductDetailsComponent,
