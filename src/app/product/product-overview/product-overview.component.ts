@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AuthenticationService } from 'src/app/authentication/authentication.service';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product-overview',
@@ -9,9 +12,17 @@ export class ProductOverviewComponent implements OnInit {
   @Input() product;
   @Input() type;
   
-  constructor() { }
+  constructor(private route: ActivatedRoute, private productService: ProductService) {
+  }
 
   ngOnInit() {
+  }
+
+  addProductToBasket(idProduct : any){
+    console.log('ngiorneg')
+    this.route.params.subscribe(params => {
+      this.productService.addProductToBasket(idProduct).subscribe(x => console.log('ADD2BASKET',x));
+    });
   }
 
 }

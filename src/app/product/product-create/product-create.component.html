@@ -1,0 +1,36 @@
+<h3>Création d'un nouveau clone</h3>
+<div>
+    <form #createClone="ngForm">
+        <mat-form-field style="width: 300px">
+          <input matInput type="text" name="label" placeholder="Nom de la célébrité clonée" value="" required ngModel #label="ngModel">
+        </mat-form-field>
+        <br/>
+        <mat-form-field style="width: 300px">
+          <textarea matInput name="description" placeholder="Description Longue" value="" required ngModel #description="ngModel"></textarea>
+        </mat-form-field>
+        <br/>
+          <mat-form-field style="width: 300px">
+              <input matInput type="text" name="shortDesc" placeholder="Description Courte" value="" required ngModel #shortDesc="ngModel">
+            </mat-form-field>
+        <br/>
+        <mat-form-field style="width: 300px">
+            <input matInput type="number" name="priority" placeholder="Priorité" value="" required ngModel #priority="ngModel">
+          </mat-form-field>
+        <br/>
+        <mat-form-field style="width: 300px">
+            <input matInput type="number" name="price_HT" placeholder="Prix_HT" value="" required ngModel #price_HT="ngModel">
+          </mat-form-field>
+        <br/>
+        <mat-form-field style="width: 300px">
+            <input matInput type="number" name="shippingPrice" placeholder="Prix expédition" value="" required ngModel #shippingPrice="ngModel">
+          </mat-form-field>
+        <br/>
+        <mat-form-field style="width: 300px">
+            <input matInput type="text" name="tva" placeholder="tva" value="" required ngModel #tva="ngModel">
+          </mat-form-field>
+        <br/>
+        <button mat-raised-button [disabled]="createClone.invalid" (click)="sendForm(createClone.value)">Connexion</button>
+      </form>
+      <pre>{{createClone.value | json}}</pre>
+  </div>
+ 

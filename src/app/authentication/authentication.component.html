@@ -1,5 +1,5 @@
 <div class="centered">
-<mat-grid-list cols="2" rowHeight="650px" gutterSize="1px">
+<mat-grid-list cols="2" rowHeight="500px" gutterSize="1px">
     <mat-grid-tile>
       <h3 class="top">Déjà Utilisateur?</h3>
       <div class="top2">
@@ -16,7 +16,6 @@
               </mat-form-field>
                 <br/>
               <button style="left:60%" mat-raised-button [disabled]="login.invalid" (click)="sendFormLogin(login.value)">Connexion</button>
-              <pre>{{login.value | json }}</pre>
             </form>
         </div>
     </mat-grid-tile>
@@ -46,12 +45,11 @@
               </mat-form-field>
               <br/>
               <mat-form-field class="inputs">
-                  <textarea matInput typer="text" name="Address" placeholder="Adresse" value="" required ngModel #Address="ngModel"></textarea>
+                  <textarea matInput name="Address" placeholder="Adresse" value="" required ngModel #Address="ngModel"></textarea>
                   <mat-error *ngIf="register.hasError('required')">Veuillez indiquer votre adresse</mat-error>
                 </mat-form-field>
                 <br/>
                 <button style="left:60%" mat-raised-button [disabled]="register.invalid" (click)="sendFormRegister(register.value)">S'inscrire</button>
-                <pre>{{register.value | json }}</pre>
             </form>
       </div>
     </mat-grid-tile>

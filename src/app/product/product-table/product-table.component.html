@@ -1,6 +1,9 @@
 <h2>Tous nos clones</h2>
-<div *ngIf='products'>
-    <ng-container  *ngFor="let product of products" >
-        <app-product-overview [product]='product' [type]="1"></app-product-overview>
-    </ng-container>
-</div>   
+<div style='align-content: center'>
+    <mat-grid-list *ngIf='products' cols="4" rowHeight="500px" gutterSize='5px'>
+        <mat-grid-tile *ngFor="let product of products" >
+            <app-product-overview [product]='product' [type]="1"></app-product-overview>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+

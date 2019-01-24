@@ -1,11 +1,11 @@
 <h2>Votre panier</h2>
 <div *ngIf='basket'>
     <div *ngIf='!basket.basketItems'>
-        vide
-      </div>
+        Vootre panier est actuellement vide
+    </div>
     <ng-container *ngFor="let product of basket.basketItems">
-        loul
-      </ng-container>
+        <app-product-overview [product]="product.item" [type]="3"></app-product-overview>
+    </ng-container>
 </div>
 
 

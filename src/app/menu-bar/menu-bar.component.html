@@ -14,7 +14,11 @@
   </button>
     <mat-menu #menu="matMenu" >
       <button *ngIf='!user' mat-menu-item [routerLink]="['authentication']">Se connecter</button>
-      <button *ngIf='user' mat-menu-item (click)="logout()" [routerLink]="['/']">Se déconnecter</button>
+      <ng-container *ngIf='user'>
+          <button mat-menu-item  [routerLink]="['/me']">Mes infos</button>
+          <button *ngIf='user.role>="1"' mat-menu-item [routerLink]="['/create']">Créer un clone</button>
+          <button mat-menu-item (click)="logout()" [routerLink]="['/']">Se déconnecter</button> 
+      </ng-container>  
     </mat-menu>
   <button *ngIf='user' class="menu-button" mat-icon-button [routerLink]="['basket']">
     <mat-icon class="menu-button-icon">shopping_cart</mat-icon>
