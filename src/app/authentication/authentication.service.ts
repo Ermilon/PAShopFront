@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { HttpClient} from "@angular/common/http";
 import { Router } from '@angular/router';
@@ -10,6 +10,9 @@ import { environment } from 'src/environments/environment.prod';
 export class AuthenticationService {
   baseUrl = environment.server;
   
+  //Permet de refresh la menuBar quand un utilisateur se connecte
+  @Output() loggedEvent: EventEmitter<any> = new EventEmitter();
+  
   constructor(private http: HttpClient, private router: Router) { }
 
   public login(value: any) {
@@ -18,7 +21,13 @@ export class AuthenticationService {
         map((data) => {
           localStorage.setItem('token', data['token']);
           this.router.navigate(['/me']);
-          window.location.reload()
+          
+          //La solution ultime qui évite ce satané window.location.reload() qui faisait planter l'application
+          //All Hail les EventEmitter
+          this.loggedEvent.emit('logged');
+
+
+          //window.location.reload();
         }, (err) => {
           console.log('An error occured', err);
         })
